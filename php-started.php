@@ -114,21 +114,6 @@ foreach($example_persons_array as $personMass) {
     $count ++;
 }
 
-// проверяла на своих данных, все варианты исполнения:)
-
-/* $fun = getGenderFromName('Суровикова Вероника Александровна');
-$fun = getGenderFromName('Щелоков Николай Александрович');
-$fun = getGenderFromName('Сурпаоа Веронп Алексй');
-
-if($fun === 1) {
-    echo 'men';
-} elseif($fun === -1) {
-    echo 'women';
-} else {
-    echo 'undefined';
-} */
-
-
 function getGenderDescription($massPeople) {
     $men = array_filter($massPeople, function($person) {
         return getGenderFromName($person['fullname']) === 1;
